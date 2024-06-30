@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.main {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.bg-man-race-wear {
+  background-image: url('/image/Photo/MAN_Race_Wear.png');
+  background-size: contain;
+  opacity: 50%;
+  background-position: center;
+}
+
+.bg-kid-race-wear {
+  background-image: url('/image/Photo/bimbo_menu.png');
+  background-size: contain;
+  opacity: 50%;
+  background-position: center;
+}
+
+.bg-man-sport {
+  background-image: url('/image/Photo/MAN_Race_Wear.png');
+  background-size: contain;
+  opacity: 50%;
+  background-position: center;
+}
+
+.bg-woman-sport {
+  background-image: url('/image/Photo/Donna_verde.png');
+  background-size: contain;
+  opacity: 50%;
+  background-position: center;
+}
+
+.bg-coach-sport {
+  background-image: url('/image/Photo/Coach.png');
+  background-size: contain;
+  opacity: 50%;
+  background-position: center;
+}
+
+.bg-common {
+  background-size: contain;
+  opacity: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-Mx-1 { background-image: url('/image/Mx_Collection/Mx_1.png'); }
+.bg-Mx-3 { background-image: url('/image/Mx_Collection/Mx_3.png'); }
+.bg-Mx-2 { background-image: url('/image/Mx_Collection/Mx_2.png'); }
+.bg-Mx-4 { background-image: url('/image/Mx_Collection/Mx_4.png'); }
+.bg-Mx-5 { background-image: url('/image/Mx_Collection/Mx_5.png'); }
+.bg-Mx-6 { background-image: url('/image/Mx_Collection/Mx_6.png'); }
+.bg-Mx-7 { background-image: url('/image/Mx_Collection/Mx_7.png'); }
+.bg-Mx-8 { background-image: url('/image/Mx_Collection/Mx_8.png'); }
+.bg-Mx-9 { background-image: url('/image/Mx_Collection/Mx_9.png'); }
+.bg-Mx-10 { background-image: url('/image/Mx_Collection/Mx_10.png'); }
+.bg-Mx-Kid { background-image: url('/image/Mx_Collection/Kid.png'); }
+
+.bg-Sport-1 { background-image: url('/image/Sport_Man_Collection/T-shirt_Man.png'); }
+.bg-Sport-2 { background-image: url('/image/Sport_Man_Collection/Sweat_Shirt.png'); }
+.bg-Sport-3 { background-image: url('/image/Sport_Man_Collection/Polo_Man.png'); }
+.bg-Sport-4 { background-image: url('/image/Sport_Man_Collection/Light_Jacket_Man.png'); }
+
+.bg-Sport_Woman-1 { background-image: url('/image/Sport_Woman_Collection/Sport_Tshirt_Woman.png'); }
+.bg-Sport_Woman-2 { background-image: url('/image/Sport_Woman_Collection/Lite_Jacket_Woman.png'); }
+.bg-Sport_Woman-3 { background-image: url('/image/Sport_Woman_Collection/Sport_Polo_Woman.png'); }
+
+.bg-Sport_Coach-1 { background-image: url('/image/Sport_Coach_Collection/Coach_Gilet.png'); }
+.bg-Sport_Coach-2 { background-image: url('/image/Sport_Coach_Collection/Lite_Jacket.png'); }
+.bg-Sport_Coach-3 { background-image: url('/image/Sport_Coach_Collection/T_Shirt_Coach.png'); }
+.bg-Sport_Coach-4 { background-image: url('/image/Sport_Coach_Collection/Track_Gilet.png'); }
+
+
+/* styles.css */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+main {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+
+
+
