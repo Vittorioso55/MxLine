@@ -38,7 +38,7 @@ const Page_1 = () => {
         <motion.div className="text-4xl lg:text-6xl font-extrabold">
           IF YOU CAN
           <motion.p
-            className="text-7xl lg:text-8xl font-extrabold text-green-500"
+            className="text-7xl lg:text-8xl font-extrabold text-green-700"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}

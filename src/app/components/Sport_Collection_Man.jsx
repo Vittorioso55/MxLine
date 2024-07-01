@@ -1,98 +1,135 @@
-import Link from "next/link";
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
-const images = [
+const products = [
   {
-    className: 'bg-Sport-1',
-    text: 'T-SHIRT',
+    title: 'T-SHIRT',
     description: 'Comfortable and stylish.',
+    images: ['bg-Sport_Woman-1a', 'bg-Sport_Woman-1b', 'bg-Sport_Woman-1c'],
     features: 'Soft, Durable, Machine washable',
     fabric: 'Cotton blend',
     options: 'Various colors and sizes'
   },
   {
-    className: 'bg-Sport-2',
-    text: 'SWEATSHIRT',
-    description: 'Warm and cozy.',
-    features: 'Fleece lined, Ribbed cuffs, Durable',
+    title: 'LITE JACKET',
+    description: 'Lightweight and versatile.',
+    images: ['bg-Sport_Woman-2a', 'bg-Sport_Woman-2b', 'bg-Sport_Woman-2c', 'bg-Sport_Woman-2d'],
+    features: 'Quick-dry, Reflective strips',
     fabric: 'Polyester blend',
     options: 'Various colors and sizes'
   },
   {
-    className: 'bg-Sport-3',
-    text: 'POLO',
-    description: 'Classic and versatile.',
+    title: 'POLO',
+    description: 'Classic and breathable.',
+    images: ['bg-Sport_Woman-3a', 'bg-Sport_Woman-3b', 'bg-Sport_Woman-3c', 'bg-Sport_Woman-3d'],
     features: 'Breathable, Stylish, Easy care',
     fabric: 'Cotton-Polyester blend',
     options: 'Various colors and sizes'
   },
-  {
-    className: 'bg-Sport-4',
-    text: 'LITE JACKET',
-    description: 'Lightweight and breathable.',
-    features: 'Quick-dry, Reflective strips',
-    fabric: 'Polyester blend',
-    options: 'Various colors and sizes'
-  }
 ];
 
-const Sport_Man_Collection = () => {
+const Sport_Collection_Woman = () => {
+  const [currentIndexes, setCurrentIndexes] = useState(products.map(() => 0));
+
+  const handlePrev = (index) => {
+    setCurrentIndexes((prevIndexes) =>
+      prevIndexes.map((currentIndex, i) =>
+        i === index ? (currentIndex === 0 ? products[index].images.length - 1 : currentIndex - 1) : currentIndex
+      )
+    );
+  };
+
+  const handleNext = (index) => {
+    setCurrentIndexes((prevIndexes) =>
+      prevIndexes.map((currentIndex, i) =>
+        i === index ? (currentIndex === products[index].images.length - 1 ? 0 : currentIndex + 1) : currentIndex
+      )
+    );
+  };
+
   return (
     <>
-      {images.map((image, index) => (
-        <section key={index} className="relative w-full h-screen flex items-center justify-center whitespace-nowrap">
+      {products.map((product, index) => (
+        <section key={index} className="relative w-full h-screen flex items-center justify-center">
           {/* Immagine di sfondo visibile su schermi grandi */}
-          <div className={`hidden lg:block w-full h-full bg-cover bg-center ${image.className} bg-common`}></div>
+          <div className={`hidden lg:block w-full h-full bg-cover bg-center ${product.images[currentIndexes[index]]} bg-common relative`}>
+            {/* Freccette per cambiare immagine */}
+            <div className="absolute left-0 top-1/2 transform -translate-y-1/2 p-4">
+              <button
+                className="bg-white text-black p-4 rounded-full transform hover:scale-110 transition duration-300"
+                onClick={() => handlePrev(index)}
+              >
+                <span className="text-3xl">&#8249;</span>
+              </button>
+            </div>
+            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 p-4">
+              <button
+                className="bg-white text-black p-4 rounded-full transform hover:scale-110 transition duration-300"
+                onClick={() => handleNext(index)}
+              >
+                <span className="text-3xl">&#8250;</span>
+              </button>
+            </div>
+          </div>
 
           {/* Contenuto */}
-          <div className="w-full h-full grid grid-cols-1 ">
-            {/* Colonna sinistra con l'immagine visibile su schermi piccoli */}
-            <div className={`relative lg:hidden w-full h-screen bg-cover bg-center ${image.className} bg-common`}>
-              {/* Testo sotto l'immagine su schermi piccoli */}
-              <div className="absolute inset-0 flex flex-col items-center justify-end bg-black bg-opacity-50 p-4 text-lg sm:text-xl md:text-2xl font-extrabold leading-snug text-center">
-                <div className="text-white">
-                  {image.text}
-                </div>
-                <div className="text-white opacity-75 text-light whitespace-nowrap">
-                  {image.description}
-                </div>
-                <div className="text-white mt-2 text-base sm:text-lg md:text-xl">
-                  <strong>Features:</strong> {image.features}
-                </div>
-                <div className="text-white mt-2 text-base sm:text-lg md:text-xl">
-                  <strong>Fabric:</strong> {image.fabric}
-                </div>
-                <div className="text-white mt-2 text-base sm:text-lg md:text-xl">
-                  <strong>Options:</strong> {image.options}
-                </div>
+          <div className="w-full h-full grid grid-cols-1">
+            {/* Colonna con l'immagine visibile su schermi piccoli */}
+            <div className={`relative lg:hidden w-full h-screen bg-cover bg-center ${product.images[currentIndexes[index]]} bg-common`}>
+              {/* Freccette per cambiare immagine */}
+              <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
+                <button
+                  className="bg-black bg-opacity-50 text-white p-4 rounded-full "
+                  onClick={() => handlePrev(index)}
+                >
+                  <span className="text-3xl">&#8249;</span>
+                </button>
+              </div>
+              <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
+                <button
+                  className="bg-black bg-opacity-50 text-white p-4 rounded-full "
+                  onClick={() => handleNext(index)}
+                >
+                  <span className="text-3xl">&#8250;</span>
+                </button>
               </div>
             </div>
 
-            {/* Colonna destra con il testo, visibile su tutti gli schermi */}
-            <div className="hidden lg:flex flex-col items-center justify-center bg-black bg-opacity-75 w-full text-4xl lg:text-8xl font-extrabold leading-snug text-center">
-              <div className="text-white">
-                {image.text}
+            {/* Testo sotto l'immagine su schermi piccoli */}
+            <div className="absolute inset-x-0 bottom-0 bg-black bg-opacity-75 p-4 text-center text-white lg:hidden">
+              <div className="text-4xl font-extrabold leading-snug">
+                {product.title}
               </div>
-              <div className="text-white opacity-75 text-2xl lg:text-4xl mt-4">
-                {image.description}
+              <div className="text-base mt-2">
+                {product.description}
               </div>
-              <div className="text-white mt-4 text-xl lg:text-2xl">
-                <strong>Features:</strong>
-                <div className="text-white opacity-75 text-2xl lg:text-4xl mt-4">
-                  {image.features}
-                </div>
+              <div className="text-base mt-2">
+                <strong>Features:</strong> {product.features}
               </div>
-              <div className="text-white mt-4 text-xl lg:text-2xl">
-                <strong>Fabric:</strong>
-                <div className="text-white opacity-75 text-2xl lg:text-4xl mt-4">
-                  {image.fabric}
-                </div>
+              <div className="text-base mt-2">
+                <strong>Fabric:</strong> {product.fabric}
               </div>
-              <div className="text-white mt-4 text-xl lg:text-2xl">
-                <strong>Options:</strong>
-                <div className="text-white opacity-75 text-2xl lg:text-4xl mt-4">
-                  {image.options}
-                </div>
+              <div className="text-base mt-2">
+                <strong>Options:</strong> {product.options}
+              </div>
+            </div>
+
+            {/* Testo accanto all'immagine su schermi grandi */}
+            <div className="hidden lg:flex flex-col justify-center items-center bg-black bg-opacity-75 p-10 text-center text-white w-full h-full">
+              <div className="text-4xl lg:text-8xl font-extrabold leading-snug mb-4">
+                {product.title}
+              </div>
+              <div className="text-2xl lg:text-4xl">
+                {product.description}
+              </div>
+              <div className="text-xl lg:text-2xl mt-4">
+                <strong>Features:</strong> {product.features}
+              </div>
+              <div className="text-xl lg:text-2xl mt-4">
+                <strong>Fabric:</strong> {product.fabric}
+              </div>
+              <div className="text-xl lg:text-2xl mt-4">
+                <strong>Options:</strong> {product.options}
               </div>
             </div>
           </div>
@@ -102,4 +139,5 @@ const Sport_Man_Collection = () => {
   );
 };
 
-export default Sport_Man_Collection;
+export default Sport_Collection_Woman;
+

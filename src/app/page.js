@@ -51,12 +51,14 @@ export default function Home() {
       <main
         className="flex min-h-screen flex-col items-left justify-between p-0"
         ref={containerRef}
+        style={{ minHeight: "100vh", overflowX: "hidden" }}
       >
         {sections.map((section, index) => (
           <section
             key={section.id}
             ref={(el) => (sectionRefs.current[index] = el)}
             className={`scroll-section ${index === currentIndex ? "active" : ""}`}
+            style={{ minHeight: "100vh" }}
           >
             {section.component}
           </section>
