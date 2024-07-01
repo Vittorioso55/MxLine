@@ -51,7 +51,12 @@ export default function Home() {
       <main
         className="flex min-h-screen flex-col items-left justify-between p-0"
         ref={containerRef}
-        style={{ minHeight: "100vh", overflowX: "hidden" }}
+        style={{
+          minHeight: "100vh",
+          overflowX: "hidden",
+          // Altezza minima per forzare lo scroll su dispositivi mobili
+          minHeight: "-webkit-fill-available",
+        }}
       >
         {sections.map((section, index) => (
           <section
