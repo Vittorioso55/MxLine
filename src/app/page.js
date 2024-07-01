@@ -33,11 +33,12 @@ const Home = () => {
     };
 
     const container = containerRef.current;
-    container.addEventListener("scroll", handleScroll);
-
-    return () => {
-      container.removeEventListener("scroll", handleScroll);
-    };
+    if (container) {
+      container.addEventListener("scroll", handleScroll);
+      return () => {
+        container.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, []);
 
   const scrollToSection = (index) => {
@@ -48,7 +49,7 @@ const Home = () => {
   };
 
   const isMobileDevice = () => {
-    return /Mobi|Android/i.test(navigator.userAgent);
+    return typeof window !== 'undefined' && /Mobi|Android/i.test(navigator.userAgent);
   };
 
   return (
@@ -74,7 +75,7 @@ const Home = () => {
           </section>
         ))}
       </main>
-      {!isMobileDevice() ? (
+      {!isMobileDevice() && (
         <Navbar>
           {sections.map((section, index) => (
             <Link
@@ -89,9 +90,8 @@ const Home = () => {
             </Link>
           ))}
         </Navbar>
-      ) : (
-        <Navbar />
       )}
+      {isMobileDevice() && <Navbar />}
     </section>
   );
 };
