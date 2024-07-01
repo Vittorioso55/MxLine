@@ -95,9 +95,9 @@ const Sport_Man_Collection = () => {
             {/* Colonna con l'immagine visibile su schermi piccoli */}
             <div className={`relative lg:hidden w-full h-screen bg-cover bg-center ${product.images[currentIndexes[index]]} bg-common`}>
               {/* Freccette per cambiare immagine */}
-              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 p-4">
+              <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
                 <button 
-                  className="bg-white text-black p-4 rounded-full transform hover:scale-110 transition duration-300" 
+                  className="bg-black bg-opacity-50 text-white p-4 rounded-full " 
                   onClick={() => handlePrev(index)}
                 >
                   <span className="text-3xl">&#8249;</span>
@@ -105,7 +105,7 @@ const Sport_Man_Collection = () => {
               </div>
               <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
                 <button 
-                  className="bg-white text-black p-4  rounded-full transform hover:scale-110 transition duration-300" 
+                  className="bg-black bg-opacity-50 text-white p-4 rounded-full " 
                   onClick={() => handleNext(index)}
                 >
                   <span className="text-3xl">&#8250;</span>

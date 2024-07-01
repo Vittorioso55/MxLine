@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useRef, useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Page_1 from "./components/Page_1";
@@ -8,7 +8,6 @@ import Page_4 from "./components/Page_4";
 import Page_5 from "./components/Page_5";
 import Page_6 from "./components/Page_6";
 import Page_7 from "./components/Page_7";
-import { Link } from "react-scroll";
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,17 +40,6 @@ const Home = () => {
     }
   }, []);
 
-  const scrollToSection = (index) => {
-    const targetSection = sectionRefs.current[index];
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const isMobileDevice = () => {
-    return typeof window !== 'undefined' && /Mobi|Android/i.test(navigator.userAgent);
-  };
-
   return (
     <section className="w-full">
       <main
@@ -60,8 +48,6 @@ const Home = () => {
         style={{
           minHeight: "100vh",
           overflowX: "hidden",
-          // Altezza minima per forzare lo scroll su dispositivi mobili
-          minHeight: "-webkit-fill-available",
         }}
       >
         {sections.map((section, index) => (
@@ -75,23 +61,7 @@ const Home = () => {
           </section>
         ))}
       </main>
-      {!isMobileDevice() && (
-        <Navbar>
-          {sections.map((section, index) => (
-            <Link
-              key={section.id}
-              to={`section${index + 1}`}
-              spy={true}
-              smooth={true}
-              duration={500}
-              className={`nav-link ${index === currentIndex ? "active" : ""}`}
-            >
-              {`Section ${index + 1}`}
-            </Link>
-          ))}
-        </Navbar>
-      )}
-      {isMobileDevice() && <Navbar />}
+      <Navbar />
     </section>
   );
 };
