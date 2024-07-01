@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 import Navbar from "./components/Navbar";
 import Page_1 from "./components/Page_1";
 import Page_2 from "./components/Page_2";
@@ -46,6 +47,10 @@ export default function Home() {
     }
   };
 
+  const isMobileDevice = () => {
+    return /Mobi|Android/i.test(navigator.userAgent);
+  };
+
   return (
     <section className="w-full">
       <main
@@ -69,7 +74,22 @@ export default function Home() {
           </section>
         ))}
       </main>
-      <Navbar />
+      {!isMobileDevice() && (
+        <Navbar>
+          {sections.map((section, index) => (
+            <Link
+              key={section.id}
+              to={`section${index + 1}`}
+              smooth={true}
+              duration={500}
+              className={`nav-link ${index === currentIndex ? "active" : ""}`}
+            >
+              {`Section ${index + 1}`}
+            </Link>
+          ))}
+        </Navbar>
+      )}
+      {isMobileDevice() && <Navbar />}
     </section>
   );
 }
