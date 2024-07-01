@@ -1,6 +1,5 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
 import Navbar from "./components/Navbar";
 import Page_1 from "./components/Page_1";
 import Page_2 from "./components/Page_2";
@@ -9,8 +8,9 @@ import Page_4 from "./components/Page_4";
 import Page_5 from "./components/Page_5";
 import Page_6 from "./components/Page_6";
 import Page_7 from "./components/Page_7";
+import { Link } from "react-scroll";
 
-export default function Home() {
+const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sections = [
     { id: "section1", component: <Page_1 /> },
@@ -74,12 +74,13 @@ export default function Home() {
           </section>
         ))}
       </main>
-      {!isMobileDevice() && (
+      {!isMobileDevice() ? (
         <Navbar>
           {sections.map((section, index) => (
             <Link
               key={section.id}
               to={`section${index + 1}`}
+              spy={true}
               smooth={true}
               duration={500}
               className={`nav-link ${index === currentIndex ? "active" : ""}`}
@@ -88,8 +89,11 @@ export default function Home() {
             </Link>
           ))}
         </Navbar>
+      ) : (
+        <Navbar />
       )}
-      {isMobileDevice() && <Navbar />}
     </section>
   );
-}
+};
+
+export default Home;
