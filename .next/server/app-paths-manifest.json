@@ -1,7 +1,7 @@
 {
   "/Man_Woman_Race/page": "app/Man_Woman_Race/page.js",
+  "/Sport_Woman/page": "app/Sport_Woman/page.js",
   "/Products/page": "app/Products/page.js",
   "/Sport_Coach/page": "app/Sport_Coach/page.js",
-  "/Sport_Woman/page": "app/Sport_Woman/page.js",
   "/page": "app/page.js"
 }
