@@ -25,6 +25,9 @@ const Home = () => {
   const sectionRefs = useRef([]);
 
   useEffect(() => {
+    // Aggiungi una classe al corpo per disabilitare lo scrolling su Safari
+    document.body.classList.add("disable-safari-scroll");
+
     const handleScroll = () => {
       const scrollPosition = containerRef.current.scrollTop;
       const sectionIndex = Math.round(scrollPosition / window.innerHeight);
@@ -38,6 +41,11 @@ const Home = () => {
         container.removeEventListener("scroll", handleScroll);
       };
     }
+
+    // Rimuovi la classe al momento dello smontaggio del componente
+    return () => {
+      document.body.classList.remove("disable-safari-scroll");
+    };
   }, []);
 
   return (
@@ -67,3 +75,4 @@ const Home = () => {
 };
 
 export default Home;
+
