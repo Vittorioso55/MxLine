@@ -27,18 +27,17 @@ const Page_1 = () => {
           backgroundSize: 'cover',
           opacity: 0.45,
           transition: 'background-image 0.5s ease-in-out'
-        }}
-      />
-      <motion.div
+        }}/>
+        <motion.div
         className="relative z-10 max-w-5xl mx-auto text-white text-center lg:text-CENTER"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <motion.div className="text-4xl lg:text-6xl font-extrabold">
+        <motion.div className="text-4xl lg:text-8xl font-extrabold">
           IF YOU CAN
           <motion.p
-            className="text-7xl lg:text-8xl font-extrabold text-green-700"
+            className="text-7xl lg:text-8xl font-extrabold text-green-500"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
@@ -57,6 +56,7 @@ const Page_1 = () => {
           IT
         </motion.div>
       </motion.div>
+      
       <div className="hidden lg:block absolute left-10">
         <button onClick={handlePrevious} className="p-2 bg-transparent text-white rounded-full">
           &lt;

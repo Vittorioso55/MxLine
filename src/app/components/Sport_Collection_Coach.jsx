@@ -97,7 +97,7 @@ const Sport_Collection_Coach = () => {
             </div>
 
             {/* Testo sotto l'immagine su schermi piccoli */}
-            <div className="absolute inset-x-0 bottom-0 bg-black bg-opacity-75 p-4 text-center text-white lg:hidden">
+            <div className="absolute inset-x-0 top-auto bottom-20 bg-black bg-opacity-75 p-4 text-center text-white lg:hidden">
               <div className="text-4xl font-extrabold leading-snug">
                 {product.title}
               </div>
@@ -123,5 +123,3 @@ const Sport_Collection_Coach = () => {
 };
 
 export default Sport_Collection_Coach;
-
-

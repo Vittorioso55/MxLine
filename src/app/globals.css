@@ -80,16 +80,37 @@ body {
   background-repeat: no-repeat;
 }
 
-.bg-Mx-1 { background-image: url('/image/Mx_Collection/Mx_1.png'); }
-.bg-Mx-3 { background-image: url('/image/Mx_Collection/Mx_3.png'); }
-.bg-Mx-2 { background-image: url('/image/Mx_Collection/Mx_2.png'); }
-.bg-Mx-4 { background-image: url('/image/Mx_Collection/Mx_4.png'); }
-.bg-Mx-5 { background-image: url('/image/Mx_Collection/Mx_5.png'); }
-.bg-Mx-6 { background-image: url('/image/Mx_Collection/Mx_6.png'); }
-.bg-Mx-7 { background-image: url('/image/Mx_Collection/Mx_7.png'); }
-.bg-Mx-8 { background-image: url('/image/Mx_Collection/Mx_8.png'); }
-.bg-Mx-9 { background-image: url('/image/Mx_Collection/Mx_9.png'); }
-.bg-Mx-10 { background-image: url('/image/Mx_Collection/Mx_10.png'); }
+.bg-Mx-1a { background-image: url('/image/Mx_Collection/MX1.png'); }
+.bg-Mx-1b { background-image: url('/image/Mx_Collection/MX1_2.png'); }
+
+.bg-Mx-3a { background-image: url('/image/Mx_Collection/MX3_1.png'); }
+.bg-Mx-3b { background-image: url('/image/Mx_Collection/MX3.png'); }
+.bg-Mx-3c { background-image: url('/image/Mx_Collection/MX3_2.png'); }
+
+.bg-Mx-2a { background-image: url('/image/Mx_Collection/MX2.png'); }
+.bg-Mx-2b { background-image: url('/image/Mx_Collection/MX2_2.png'); }
+
+.bg-Mx-4 { background-image: url('/image/Mx_Collection/MX4.png'); }
+.bg-Mx-5 { background-image: url('/image/Mx_Collection/MX5.png'); }
+.bg-Mx-6 { background-image: url('/image/Mx_Collection/MX6.png'); }
+
+.bg-Mx-7a { background-image: url('/image/Mx_Collection/MX7.png'); }
+.bg-Mx-7b { background-image: url('/image/Mx_Collection/MX7_2.png'); }
+.bg-Mx-7c { background-image: url('/image/Mx_Collection/MX7_3.png'); }
+
+
+.bg-Mx-8a { background-image: url('/image/Mx_Collection/MX8.png'); }
+.bg-Mx-8b { background-image: url('/image/Mx_Collection/MX8_2.png'); }
+.bg-Mx-8c { background-image: url('/image/Mx_Collection/MX8_3.png'); }
+
+.bg-Mx-9a { background-image: url('/image/Mx_Collection/MX9.png'); }
+.bg-Mx-9b { background-image: url('/image/Mx_Collection/MX9_1.png'); }
+.bg-Mx-9c { background-image: url('/image/Mx_Collection/MX9_2.png'); }
+.bg-Mx-9d { background-image: url('/image/Mx_Collection/MX9_3.png'); }
+
+.bg-Mx-10a { background-image: url('/image/Mx_Collection/MX10.png'); }
+.bg-Mx-10b { background-image: url('/image/Mx_Collection/MX10_2.png'); }
+
 .bg-Mx-Kid { background-image: url('/image/Mx_Collection/Kid.png'); }
 
 .bg-Sport-1a { background-image: url('/image/Sport_Man_Collection/T-shirt.png'); }

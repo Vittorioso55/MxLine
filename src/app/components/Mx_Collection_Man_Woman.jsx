@@ -1,51 +1,167 @@
 "use client";
-import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
-const images = [
-  { className: 'bg-Mx-1', text: 'MX-1 JERSEY', description: 'Comfortable and stylish.' },
-  { className: 'bg-Mx-2', text: 'MX-2 JERSEY', description: 'Lightweight and versatile.' },
-  { className: 'bg-Mx-3', text: 'MX-3 JERSEY', description: 'Soft and breathable.' },
-  { className: 'bg-Mx-4', text: 'MX-4 JERSEY', description: 'Durable and functional.' },
-  { className: 'bg-Mx-5', text: 'MX-5 JERSEY', description: 'Sleek and aerodynamic.' },
-  { className: 'bg-Mx-6', text: 'MX-6 JERSEY', description: 'High-performance fabric.' },
-  { className: 'bg-Mx-7', text: 'MX-7 JERSEY', description: 'Advanced moisture-wicking.' },
-  { className: 'bg-Mx-8', text: 'MX-8 JERSEY', description: 'Designed for all-day comfort.' },
-  { className: 'bg-Mx-9', text: 'MX-9 JERSEY', description: 'Modern and minimalist.' },
-  { className: 'bg-Mx-10', text: 'MX-10 SLIM', description: 'Streamlined for speed.' },
-  // Aggiungi altre immagini e testi qui
+const products = [
+  { 
+    title: 'MX-1 JERSEY', 
+    description: 'Comfortable and stylish.', 
+    images: ['bg-Mx-1a', 'bg-Mx-1b'],
+    features: 'Soft, Durable, Machine washable',
+    fabric: 'Polyester blend',
+    options: 'Various colors and sizes'
+  },
+  { 
+    title: 'MX-2 JERSEY', 
+    description: 'Lightweight and versatile.', 
+    images: ['bg-Mx-2a', 'bg-Mx-2b'],
+    features: 'Light, Breathable, Quick-dry',
+    fabric: 'Polyester blend',
+    options: 'Various colors and sizes'
+  },
+  { 
+    title: 'MX-3 JERSEY', 
+    description: 'Lightweight and versatile.', 
+    images: ['bg-Mx-3a', 'bg-Mx-3b', 'bg-Mx-3c'],
+    features: 'Light, Breathable, Quick-dry',
+    fabric: 'Polyester blend',
+    options: 'Various colors and sizes'
+  },
+  { 
+    title: 'MX-7 JERSEY', 
+    description: 'Lightweight and versatile.', 
+    images: ['bg-Mx-7a', 'bg-Mx-7b', 'bg-Mx-7c'],
+    features: 'Light, Breathable, Quick-dry',
+    fabric: 'Polyester blend',
+    options: 'Various colors and sizes'
+  },
+  { 
+    title: 'MX-8 JERSEY', 
+    description: 'Lightweight and versatile.', 
+    images: ['bg-Mx-8a', 'bg-Mx-8b', 'bg-Mx-8c'],
+    features: 'Light, Breathable, Quick-dry',
+    fabric: 'Polyester blend',
+    options: 'Various colors and sizes'
+  },
+  { 
+    title: 'MX-9 JERSEY', 
+    description: 'Lightweight and versatile.', 
+    images: ['bg-Mx-9a', 'bg-Mx-9b', 'bg-Mx-9c'],
+    features: 'Light, Breathable, Quick-dry',
+    fabric: 'Polyester blend',
+    options: 'Various colors and sizes'
+  },
+  { 
+    title: 'MX-10 SLIM', 
+    description: 'Lightweight and versatile.', 
+    images: ['bg-Mx-10a', 'bg-Mx-10b', 'bg-Mx-10c'],
+    features: 'Light, Breathable, Quick-dry',
+    fabric: 'Polyester blend',
+    options: 'Various colors and sizes'
+  },
 ];
 
 const Mx_Collection = () => {
+  const [currentIndexes, setCurrentIndexes] = useState(products.map(() => 0));
+
+  const handlePrev = (index) => {
+    setCurrentIndexes((prevIndexes) => 
+      prevIndexes.map((currentIndex, i) => 
+        i === index ? (currentIndex === 0 ? products[index].images.length - 1 : currentIndex - 1) : currentIndex
+      )
+    );
+  };
+
+  const handleNext = (index) => {
+    setCurrentIndexes((prevIndexes) => 
+      prevIndexes.map((currentIndex, i) => 
+        i === index ? (currentIndex === products[index].images.length - 1 ? 0 : currentIndex + 1) : currentIndex
+      )
+    );
+  };
+
   return (
     <>
-      {images.map((image, index) => (
+      {products.map((product, index) => (
         <section key={index} className="relative w-full h-screen flex items-center justify-center">
           {/* Immagine di sfondo visibile su schermi grandi */}
-          <div className={`hidden lg:block w-full h-full bg-cover bg-center ${image.className} bg-common`}></div>
+          <div className={`hidden lg:block w-full h-full bg-cover bg-center ${product.images[currentIndexes[index]]} bg-common relative`}>
+            {/* Freccette per cambiare immagine */}
+            <div className="absolute left-0 top-1/2 transform -translate-y-1/2 p-8">
+              <button 
+                className="bg-white text-black p-4 rounded-full transform hover:scale-110 transition duration-300" 
+                onClick={() => handlePrev(index)}
+              >
+                <span className="text-3xl">&#8249;</span>
+              </button>
+            </div>
+            <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
+              <button 
+                className="bg-white text-black p-4 rounded-full transform hover:scale-110 transition duration-300" 
+                onClick={() => handleNext(index)}
+              >
+                <span className="text-3xl">&#8250;</span>
+              </button>
+            </div>
+          </div>
 
           {/* Contenuto */}
           <div className="w-full h-full grid grid-cols-1">
-            {/* Colonna sinistra con l'immagine visibile su schermi piccoli */}
-            <div className={`relative lg:hidden w-full h-screen bg-cover bg-center ${image.className} bg-common`}>
-              {/* Testo sotto l'immagine su schermi piccoli */}
-              <div className="absolute inset-x-0 bottom-0 bg-black bg-opacity-75 p-4 text-center text-white lg:hidden">
-                <div className="text-4xl font-extrabold leading-snug">
-                  {image.text}
-                </div>
-                <div className="text-base ">
-                  {image.description}
-                </div>
+            {/* Colonna con l'immagine visibile su schermi piccoli */}
+            <div className={`relative lg:hidden w-full h-auto bg-cover bg-center ${product.images[currentIndexes[index]]} bg-common mt-2`}>
+              {/* Freccette per cambiare immagine */}
+              <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
+                <button 
+                  className="bg-black bg-opacity-50 text-white p-4 rounded-full " 
+                  onClick={() => handlePrev(index)}
+                >
+                  <span className="text-3xl">&#8249;</span>
+                </button>
+              </div>
+              <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
+                <button 
+                  className="bg-black bg-opacity-50 text-white p-4 rounded-full " 
+                  onClick={() => handleNext(index)}
+                >
+                  <span className="text-3xl">&#8250;</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Testo sotto l'immagine su schermi piccoli */}
+            <div className="absolute top-auto bottom-20 inset-x-0 bg-black bg-opacity-75 p-4 text-center text-white lg:hidden">
+              <div className="text-4xl font-extrabold leading-snug">
+                {product.title}
+              </div>
+              <div className="text-base mt-2">
+                {product.description}
+              </div>
+              <div className="text-base mt-2">
+                <strong>Features:</strong> {product.features}
+              </div>
+              <div className="text-base mt-2">
+                <strong>Fabric:</strong> {product.fabric}
+              </div>
+              <div className="text-base mt-2">
+                <strong>Options:</strong> {product.options}
               </div>
             </div>
 
             {/* Testo accanto all'immagine su schermi grandi */}
             <div className="hidden lg:flex flex-col justify-center items-center bg-black bg-opacity-75 p-10 text-center text-white w-full h-full">
               <div className="text-4xl lg:text-8xl font-extrabold leading-snug mb-4">
-                {image.text}
+                {product.title}
               </div>
               <div className="text-2xl lg:text-4xl">
-                {image.description}
+                {product.description}
+              </div>
+              <div className="text-xl lg:text-2xl mt-4">
+                <strong>Features:</strong> {product.features}
+              </div>
+              <div className="text-xl lg:text-2xl mt-4">
+                <strong>Fabric:</strong> {product.fabric}
+              </div>
+              <div className="text-xl lg:text-2xl mt-4">
+                <strong>Options:</strong> {product.options}
               </div>
             </div>
           </div>
