@@ -34,14 +34,8 @@ const Page_4 = () => {
           OUR PRODUCTS
         </motion.h1>
 
-        <div className="w-full border-t border-gray-500 my-4"></div>
 
-        <div className="font-extrabold text-4xl lg:text-6xl leading-snug hover:text-green-500 cursor-not-allowed">
-          <Link href="/MxDaily">
-            MX DAILY
-            <br /> <p className="text-xl">2024</p>
-          </Link>
-        </div>
+     
 
         <div className="w-full border-t border-gray-500 my-4"></div>
 

@@ -4,59 +4,83 @@ import React, { useState } from "react";
 const products = [
   { 
     title: 'MX-1 JERSEY', 
-    description: 'Comfortable and stylish.', 
+    // description: 'Lightweight and versatile.', 
     images: ['bg-Mx-1a', 'bg-Mx-1b'],
-    features: 'Soft, Durable, Machine washable',
-    fabric: 'Polyester blend',
-    options: 'Various colors and sizes'
+    fabric: '100% Poliestere',
+    features: 'Maglia Standard con manica Raglan e collo a “V',
+    // options: 'Various colors and sizes'
   },
   { 
     title: 'MX-2 JERSEY', 
-    description: 'Lightweight and versatile.', 
+    // description: 'Lightweight and versatile.', 
     images: ['bg-Mx-2a', 'bg-Mx-2b'],
-    features: 'Light, Breathable, Quick-dry',
-    fabric: 'Polyester blend',
-    options: 'Various colors and sizes'
+    features: 'Maglia Standard con manica Raglan, fianchi e spalline in rete e colletto a giro con taglio rettangolare sul davanti',
+    fabric: '100% Poliestere',
+    // options: 'Various colors and sizes'
   },
   { 
     title: 'MX-3 JERSEY', 
-    description: 'Lightweight and versatile.', 
+    // description: 'Lightweight and versatile.', 
     images: ['bg-Mx-3a', 'bg-Mx-3b', 'bg-Mx-3c'],
-    features: 'Light, Breathable, Quick-dry',
-    fabric: 'Polyester blend',
-    options: 'Various colors and sizes'
+    features: 'Maglia Standard con manica Raglan e collo a “V” parte posteriore in materiale ventilato',
+    fabric: '100% Poliestere',
+    // options: 'Various colors and sizes'
+  },
+  { 
+    title: 'MX-4 JERSEY', 
+    // description: 'Lightweight and versatile.', 
+    images: ['bg-Mx-4a', 'bg-Mx-4b'],
+    features: 'Maglia Standard con manica Raglan e collo a “V” parte posteriore in materiale ventilato',
+    fabric: '100% Poliestere',
+    // options: 'Various colors and sizes'
+  },
+  { 
+    title: 'MX-5 JERSEY', 
+    // description: 'Lightweight and versatile.', 
+    images: ['bg-Mx-5a', 'bg-Mx-5b', 'bg-Mx-5c'],
+    features: 'Maglia Standard con manica Raglan, collo a giro e polso America',
+    fabric: '100% Poliestere',
+    // options: 'Various colors and sizes'
+  },
+  { 
+    title: 'MX-6 JERSEY', 
+    // description: 'Lightweight and versatile.', 
+    images: ['bg-Mx-6a', 'bg-Mx-6b'],
+    features: 'Maglia Standard con manica Raglan, fianchi e sottomanica in rete e colletto a “V” con speciale inserto sul davanti',
+    fabric: '100% Poliestere',
+    // options: 'Various colors and sizes'
   },
   { 
     title: 'MX-7 JERSEY', 
-    description: 'Lightweight and versatile.', 
-    images: ['bg-Mx-7a', 'bg-Mx-7b', 'bg-Mx-7c'],
-    features: 'Light, Breathable, Quick-dry',
-    fabric: 'Polyester blend',
-    options: 'Various colors and sizes'
+    // description: 'Lightweight and versatile.', 
+    images: ['bg-Mx-7a', 'bg-Mx-7b'],
+    features: 'Maglia Standard con manica a giro e collo a “V”',
+    fabric: '100% Poliestere',
+    // options: 'Various colors and sizes'
   },
   { 
     title: 'MX-8 JERSEY', 
-    description: 'Lightweight and versatile.', 
+    // description: 'Lightweight and versatile.', 
     images: ['bg-Mx-8a', 'bg-Mx-8b', 'bg-Mx-8c'],
-    features: 'Light, Breathable, Quick-dry',
-    fabric: 'Polyester blend',
-    options: 'Various colors and sizes'
+    features: 'Maglia Standard con manica Raglan, fianchi e sottomaniche in rete e colletto a giro con taglio rettangolare sul davanti',
+    fabric: '100% Poliestere',
+    // options: 'Various colors and sizes'
   },
   { 
     title: 'MX-9 JERSEY', 
-    description: 'Lightweight and versatile.', 
+    // description: 'Lightweight and versatile.', 
     images: ['bg-Mx-9a', 'bg-Mx-9b', 'bg-Mx-9c'],
-    features: 'Light, Breathable, Quick-dry',
+    features: 'Maglia Standard con manica Raglan, fianchi e sottomaniche in rete e colletto a giro con taglio rettangolare sul davanti',
     fabric: 'Polyester blend',
-    options: 'Various colors and sizes'
+    // options: 'Various colors and sizes'
   },
   { 
     title: 'MX-10 SLIM', 
-    description: 'Lightweight and versatile.', 
+    // description: 'Lightweight and versatile.', 
     images: ['bg-Mx-10a', 'bg-Mx-10b', 'bg-Mx-10c'],
-    features: 'Light, Breathable, Quick-dry',
-    fabric: 'Polyester blend',
-    options: 'Various colors and sizes'
+    features: 'Maglia Standard con manica a giro, fornita di fianchetti in lycra e collo America',
+    fabric: '100% Poliestere',
+    // options: 'Various colors and sizes'
   },
 ];
 
@@ -141,9 +165,9 @@ const Mx_Collection = () => {
               <div className="text-base mt-2">
                 <strong>Fabric:</strong> {product.fabric}
               </div>
-              <div className="text-base mt-2">
+              {/* <div className="text-base mt-2">
                 <strong>Options:</strong> {product.options}
-              </div>
+              </div> */}
             </div>
 
             {/* Testo accanto all'immagine su schermi grandi */}
@@ -160,9 +184,9 @@ const Mx_Collection = () => {
               <div className="text-xl lg:text-2xl mt-4">
                 <strong>Fabric:</strong> {product.fabric}
               </div>
-              <div className="text-xl lg:text-2xl mt-4">
+              {/* <div className="text-xl lg:text-2xl mt-4">
                 <strong>Options:</strong> {product.options}
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
