@@ -1,25 +1,20 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
-    "/RaceWear/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/RaceWear/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/Man_Woman_Race/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/Man_Woman_Race/page.js"
+      "static/chunks/app/page.js"
+    ],
+    "/Man_Sport/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Man_Sport/page.js"
     ],
     "/Products/page": [
       "static/chunks/webpack.js",
@@ -30,6 +25,36 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/SportWear/page.js"
+    ],
+    "/RaceWear/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/RaceWear/page.js"
+    ],
+    "/Man_Woman_Race/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Man_Woman_Race/page.js"
+    ],
+    "/Sport_Coach/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Sport_Coach/page.js"
+    ],
+    "/Kid/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Kid/page.js"
+    ],
+    "/About_us/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/About_us/page.js"
+    ],
+    "/Sport_Woman/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Sport_Woman/page.js"
     ]
   }
 }

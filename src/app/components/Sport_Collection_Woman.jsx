@@ -5,7 +5,7 @@ import React, { useState } from "react";
 const products = [
   { 
     title: 'T-SHIRT', 
-    description: 'Comfortable and stylish.', 
+    // description: 'Comfortable and stylish.', 
     images: ['bg-Sport_Woman-1a', 'bg-Sport_Woman-1b', 'bg-Sport_Woman-1c'],
     features: 'Soft, Durable, Machine washable',
     fabric: 'Cotton blend',
@@ -13,7 +13,7 @@ const products = [
   },
   { 
     title: 'LITE JACKET', 
-    description: 'Lightweight and versatile.', 
+    // description: 'Lightweight and versatile.', 
     images: ['bg-Sport_Woman-2a', 'bg-Sport_Woman-2b', 'bg-Sport_Woman-2c', 'bg-Sport_Woman-2d'],
     features: 'Quick-dry, Reflective strips',
     fabric: 'Polyester blend',
@@ -21,7 +21,7 @@ const products = [
   },
   { 
     title: 'POLO', 
-    description: 'Classic and breathable.', 
+    // description: 'Classic and breathable.', 
     images: ['bg-Sport_Woman-3a', 'bg-Sport_Woman-3b', 'bg-Sport_Woman-3c', 'bg-Sport_Woman-3d'],
     features: 'Breathable, Stylish, Easy care',
     fabric: 'Cotton-Polyester blend',
@@ -56,21 +56,21 @@ const Sport_Collection_Woman = () => {
           <div className={`hidden lg:block w-full h-full bg-cover bg-center ${product.images[currentIndexes[index]]} bg-common relative`}>
             {/* Freccette per cambiare immagine */}
             <div className="absolute left-0 top-1/2 transform -translate-y-1/2 p-4">
-  <button 
-    className="bg-white text-black p-4 rounded-full transform hover:scale-110 transition duration-300" 
-    onClick={() => handlePrev(index)}
-  >
-    <span className="text-3xl">&#8249;</span>
-  </button>
-</div>
-<div className=" absolute right-0 top-1/2 transform -translate-y-1/2 ml-4 ">
-  <button 
-    className="bg-white text-black p-4  rounded-full transform hover:scale-110 transition duration-300" 
-    onClick={() => handleNext(index)}
-  >
-    <span className="text-3xl">&#8250;</span>
-  </button>
-</div>
+              <button 
+                className=" text-white p-4 rounded-full transform hover:scale-110 transition duration-300 " 
+                onClick={() => handlePrev(index)}
+              >
+                <span className="text-5xl">&#8249;</span>
+              </button>
+            </div>
+            <div className=" absolute right-0 top-1/2 transform -translate-y-1/2 ml-4 ">
+              <button 
+                className=" text-white p-4  rounded-full transform hover:scale-110 transition duration-300" 
+                onClick={() => handleNext(index)}
+              >
+                <span className="text-5xl">&#8250;</span>
+              </button>
+            </div>
           </div>
 
           {/* Contenuto */}
@@ -80,7 +80,7 @@ const Sport_Collection_Woman = () => {
               {/* Freccette per cambiare immagine */}
               <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
                 <button 
-                  className="bg-black bg-opacity-50 text-white p-4 rounded-full " 
+                  className="bg-black bg-opacity-50 text-white p-4  " 
                   onClick={() => handlePrev(index)}
                 >
                   <span className="text-3xl">&#8249;</span>
@@ -88,7 +88,7 @@ const Sport_Collection_Woman = () => {
               </div>
               <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
                 <button 
-                  className="bg-black bg-opacity-50 text-white p-4 rounded-full " 
+                  className="bg-black bg-opacity-50 text-white p-4  " 
                   onClick={() => handleNext(index)}
                 >
                   <span className="text-3xl">&#8250;</span>
@@ -113,6 +113,15 @@ const Sport_Collection_Woman = () => {
               <div className="text-base mt-2">
                 <strong>Options:</strong> {product.options}
               </div>
+              <div
+                href="mailto:albertomxline@gmail.com?subject=Custom Inquiry&body=I am interested in your custom services."
+                className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full"
+                initial={{ opacity: 0, y: 20 }}
+              
+                transition={{ duration: 1, delay: 1.5 }}
+              >
+              Contact Us
+              </div>
             </div>
 
             {/* Testo accanto all'immagine su schermi grandi */}
@@ -132,6 +141,16 @@ const Sport_Collection_Woman = () => {
               <div className="text-xl lg:text-2xl mt-4">
                 <strong>Options:</strong> {product.options}
               </div>
+              <div
+                href="mailto:albertomxline@gmail.com?subject=Custom Inquiry&body=I am interested in your custom services."
+                className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full"
+                initial={{ opacity: 0, y: 20 }}
+              
+                transition={{ duration: 1, delay: 1.5 }}
+              >
+              Contact Us
+              </div>
+            
             </div>
           </div>
         </section>

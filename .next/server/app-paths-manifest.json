@@ -1,7 +1,7 @@
 {
-  "/page": "app/page.js",
-  "/Man_Woman_Race/page": "app/Man_Woman_Race/page.js",
-  "/Products/page": "app/Products/page.js",
+  "/Man_Sport/page": "app/Man_Sport/page.js",
+  "/Kid/page": "app/Kid/page.js",
   "/SportWear/page": "app/SportWear/page.js",
-  "/RaceWear/page": "app/RaceWear/page.js"
+  "/About_us/page": "app/About_us/page.js",
+  "/Products/page": "app/Products/page.js"
 }

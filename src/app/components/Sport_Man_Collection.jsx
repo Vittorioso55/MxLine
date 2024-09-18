@@ -1,9 +1,7 @@
 "use client";
-import React from "react";
-
-
 const Sport_Man_Collection = () => {
-  return (
+  
+    return (
     <section
       className="relative w-full h-screen flex items-center justify-center bg-cover ">
 
@@ -15,12 +13,13 @@ const Sport_Man_Collection = () => {
         opacity: 0.45, // Opacità del 50%
       }}
     />
+
     
         <div className="relative z-10 max-w-5xl mx-auto text-white text-center lg:text-CENTER">
           <div className="text-4xl lg:text-8xl font-extrabold">
            SPORT WEAR
            </div>
-           <div className="text-3xl lg:text-6xl font-extrabold opacity-80">
+           <div className=" text-green-500 text-3xl lg:text-6xl font-extrabold opacity-80">
            MAN COLLECTION
            </div>
         </div>
