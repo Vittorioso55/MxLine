@@ -23,7 +23,18 @@ const Page_4 = () => {
 
   return (
     <section className="relative w-full h-screen flex flex-col items-center justify-center bg-black">
-      <div className="text-white text-center p-8">
+      {/* Immagine di sfondo opacizzata */}
+      <div
+        className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+        style={{
+          backgroundImage: `url('/image/Photo/About_Us.png')`,
+           // Posiziona l'immagine dietro tutto
+          opacity: 0.3, // Opacità dell'immagine
+        }}
+      />
+
+      {/* Testo e contenuto in primo piano */}
+      <div className="text-white text-center p-8 z-10">
         <motion.h1
           className="font-extrabold text-green-500 text-4xl lg:text-7xl leading-snug mb-10"
           ref={ref}
@@ -34,23 +45,16 @@ const Page_4 = () => {
           OUR PRODUCTS
         </motion.h1>
 
-
-     
-
         <div className="w-full border-t border-gray-500 my-4"></div>
 
-        <div className="font-extrabold text-4xl lg:text-6xl leading-snug hover:text-green-500 cursor-not-allowed">
-          <Link href="./SportWear">
-            SPORT WEAR
-          </Link>
+        <div className="font-extrabold text-4xl lg:text-6xl leading-snug hover:text-green-500 cursor-pointer">
+          <Link href="./SportWear">SPORT WEAR</Link>
         </div>
 
         <div className="w-full border-t border-gray-500 my-4"></div>
 
-        <div className="font-extrabold text-4xl lg:text-6xl leading-snug hover:text-green-500 cursor-not-allowed">
-          <Link href="./RaceWear">
-            RACE WEAR
-          </Link>
+        <div className="font-extrabold text-4xl lg:text-6xl leading-snug hover:text-green-500 cursor-pointer">
+          <Link href="./RaceWear">RACE WEAR</Link>
         </div>
       </div>
     </section>

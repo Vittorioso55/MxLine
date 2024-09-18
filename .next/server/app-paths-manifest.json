@@ -1,7 +1,5 @@
 {
-  "/Man_Sport/page": "app/Man_Sport/page.js",
-  "/Kid/page": "app/Kid/page.js",
+  "/page": "app/page.js",
   "/SportWear/page": "app/SportWear/page.js",
-  "/About_us/page": "app/About_us/page.js",
-  "/Products/page": "app/Products/page.js"
+  "/Man_Sport/page": "app/Man_Sport/page.js"
 }
