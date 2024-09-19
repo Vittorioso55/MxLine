@@ -20,6 +20,7 @@ const Page_1 = () => {
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center bg-cover">
+      
       <div
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
         style={{
@@ -67,9 +68,7 @@ const Page_1 = () => {
           &gt;
         </button>
       </div>
-      <div className="absolute bottom-1 text-green-500">
-        <p>100% MADE IN ITALY</p>
-      </div>
+      
     </section>
   );
 };

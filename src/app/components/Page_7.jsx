@@ -22,14 +22,17 @@ const Page_7 = () => {
   };
 
   return (
-    <section className="relative w-full h-screen flex flex-col items-center justify-center  bg-black">
+    <section className="relative w-full h-screen flex flex-col items-center justify-center bg-black">
+      {/* Background image */}
       <div
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
         style={{
-          backgroundImage: `url('/image/photo/About_Us.png')`, // Assicurati che il percorso dell'immagine sia corretto
-          opacity: 0.2, // Opacità dell'immagine di sfondo
+          backgroundImage: `url('/image/photo/About_Us.png')`,
+          opacity: 0.2,
         }}
       />
+
+      {/* Text Content */}
       <div className="text-white text-center p-8" ref={ref}>
         <motion.h1
           className="font-extrabold text-7xl lg:text-8xl leading-snug text-green-500"
@@ -54,6 +57,35 @@ const Page_7 = () => {
             appassionati, mettendo al primo posto le esigenze del cliente per
             instaurare un rapporto di co-creazione e fiducia.
           </p>
+        </div>
+      </div>
+
+      {/* Contact Banner */}
+      <div className="fixed bottom bottom  bottom-0 w-full bg-black bg-opacity-75 text-white py-4 px-3 lg:px-8 flex flex-col lg:flex-row justify-between items-center space-y-1 lg:space-y-0">
+        <div className="text-lg font-bold">
+          Contattaci: <a href="mailto:info@mxline.com" className="underline">info@mxline.com</a> | <a href="tel:+123456789" className="underline">+1 234 567 89</a>
+        </div>
+        <div className="text-base lg:text-lg">
+        Via Spercenigo 31, Veneto, Italy 31030
+        </div>
+        <div className="flex space-x-4">
+          <a
+            href="https://www.facebook.com/mxline"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-gray-200 transition duration-300"
+          >
+            Facebook
+          </a>
+          <a
+            href="https://www.instagram.com/mxlineapparel"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-gray-200 transition duration-300"
+          >
+            Instagram
+          </a>
+          
         </div>
       </div>
     </section>

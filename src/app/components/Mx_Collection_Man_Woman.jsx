@@ -3,35 +3,65 @@ import React, { useState } from "react";
 
 const products = [
   { 
-    title: 'T-SHIRT', 
-    images: ['bg-Sport-1a', 'bg-Sport-1b', 'bg-Sport-1c'],
+    title: 'MX-1', 
+    images: ['bg-Mx-1a', 'bg-Mx-1b'],
     features: 'Soft, Durable, Machine washable',
     fabric: 'Cotton blend',
   },
   { 
-    title: 'POLO', 
-    images: ['bg-Sport-3a', 'bg-Sport-3b', 'bg-Sport-3c', 'bg-Sport-3d'],
+    title: 'MX-2', 
+    images: ['bg-Mx-2a', 'bg-Mx-2b'],
     features: 'Breathable, Stylish, Easy care',
     fabric: 'Cotton-Polyester blend',
   },
   { 
-    title: 'SWEATSHIRT', 
-    images: ['bg-Sport-2a', 'bg-Sport-2b', 'bg-Sport-2c', 'bg-Sport-2d'],
+    title: 'MX-3', 
+    images: ['bg-Mx-3a', 'bg-Mx-3b', 'bg-Mx-3c'],
     features: 'Fleece lined, Ribbed cuffs, Durable',
     fabric: 'Polyester blend',
   },
   { 
-    title: 'LITE JACKET', 
-    images: ['bg-Sport-4a', 'bg-Sport-4b', 'bg-Sport-4c', 'bg-Sport-4d'],
+    title: 'MX-4', 
+    images: ['bg-Mx-4a', 'bg-Mx-4b'],
     features: 'Quick-dry, Reflective strips',
     fabric: 'Polyester blend',
   },
   { 
-    title: 'FACTORY JACKET', 
-    images: ['bg-Sport-5a', 'bg-Sport-5b', 'bg-Sport-5c', 'bg-Sport-5d'],
+    title: 'MX-5', 
+    images: ['bg-Mx-5a', 'bg-Mx-5b'],
     features: 'Quick-dry, Reflective strips',
     fabric: 'Polyester blend',
-  }
+  },
+  { 
+    title: 'MX-6', 
+    images: ['bg-Mx-6a', 'bg-Mx-6b'],
+    features: 'Quick-dry, Reflective strips',
+    fabric: 'Polyester blend',
+  },
+  { 
+    title: 'MX-7', 
+    images: ['bg-Mx-7a', 'bg-Mx-7b','bg-Mx-7c'],
+    features: 'Quick-dry, Reflective strips',
+    fabric: 'Polyester blend',
+  },
+  { 
+    title: 'MX-8', 
+    images: ['bg-Mx-8a', 'bg-Mx-8b', 'bg-Mx-8c'],
+    features: 'Quick-dry, Reflective strips',
+    fabric: 'Polyester blend',
+  },
+  { 
+    title: 'MX-9', 
+    images: ['bg-Mx-9a', 'bg-Mx-9b','bg-Mx-9c','bg-Mx-9d'],
+    features: 'Quick-dry, Reflective strips',
+    fabric: 'Polyester blend',
+  },
+  { 
+    title: 'MX-10 Slim', 
+    images: ['bg-Mx-10a', 'bg-Mx-10b'],
+    features: 'Quick-dry, Reflective strips',
+    fabric: 'Polyester blend',
+  },
 ];
 
 const Sport_Man_Collection = () => {
