@@ -27,7 +27,7 @@ const Page_4 = () => {
       <div
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
         style={{
-          backgroundImage: `url('/image/Photo/Sfondo_page.jpg')`,
+          backgroundImage: `url('/image/Photo/screen.png')`,
            // Posiziona l'immagine dietro tutto
           opacity: 0.2, // Opacità dell'immagine
         }}

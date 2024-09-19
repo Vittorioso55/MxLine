@@ -1,3 +1,5 @@
 {
+  "/SportWear/page": "app/SportWear/page.js",
+  "/Man_Sport/page": "app/Man_Sport/page.js",
   "/page": "app/page.js"
 }
