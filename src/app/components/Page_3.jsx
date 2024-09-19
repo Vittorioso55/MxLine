@@ -23,6 +23,14 @@ const Page_3 = () => {
 
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center  bg-black">
+      <div
+        className="absolute top-0 left-50 w-full h-full bg-cover bg-left mb-bg-cover"
+        style={{
+          backgroundImage: `url('/image/Photo/Italy.png')`,
+           // Posiziona l'immagine dietro tutto
+          opacity: 0.2, // Opacità dell'immagine
+        }}
+      />
       <div className="text-white text-center p-4 md:p-8 max-w-3xl">
         <h1 className="font-extrabold text-3xl md:text-5xl lg:text-6xl leading-snug" ref={ref}>
           MX LINE REPRESENTS THE{" "}

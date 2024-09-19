@@ -23,6 +23,13 @@ const Page_7 = () => {
 
   return (
     <section className="relative w-full h-screen flex flex-col items-center justify-center  bg-black">
+      <div
+        className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+        style={{
+          backgroundImage: `url('/image/photo/About_Us.png')`, // Assicurati che il percorso dell'immagine sia corretto
+          opacity: 0.2, // Opacità dell'immagine di sfondo
+        }}
+      />
       <div className="text-white text-center p-8" ref={ref}>
         <motion.h1
           className="font-extrabold text-7xl lg:text-8xl leading-snug text-green-500"

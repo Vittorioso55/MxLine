@@ -385,6 +385,7 @@ class Stage extends Container_1.Container {
             DragAndDrop_1.DD.justDragged = false;
             Global_1.Konva['_' + eventType + 'ListenClick'] = true;
             if (!shape || !shape.isListening()) {
+                this[eventType + 'ClickStartShape'] = undefined;
                 return;
             }
             if (Global_1.Konva.capturePointerEventsEnabled) {
@@ -693,3 +694,10 @@ exports.Stage = Stage;
 Stage.prototype.nodeType = STAGE;
 (0, Global_2._registerNode)(Stage);
 Factory_1.Factory.addGetterSetter(Stage, 'container');
+if (Global_1.Konva.isBrowser) {
+    document.addEventListener('visibilitychange', () => {
+        exports.stages.forEach((stage) => {
+            stage.batchDraw();
+        });
+    });
+}

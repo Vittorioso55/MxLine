@@ -22,6 +22,8 @@ const Page_5 = () => {
 
   return (
     <section className="relative w-full h-screen flex flex-col items-center justify-center  bg-black">
+      
+    
       <div className="text-white text-center p-8">
         <h1 className="font-extrabold text-4xl lg:text-6xl leading-snug">
           MXLINE{" "}
