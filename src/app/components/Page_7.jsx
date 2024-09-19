@@ -61,12 +61,16 @@ const Page_7 = () => {
       </div>
 
       {/* Contact Banner */}
-      <div className="fixed bottom bottom  bottom-0 w-full bg-black bg-opacity-75 text-white py-4 px-3 lg:px-8 flex flex-col lg:flex-row justify-between items-center space-y-1 lg:space-y-0">
-        <div className="text-lg font-bold">
-          Contattaci: <a href="mailto:info@mxline.com" className="underline">info@mxline.com</a> | <a href="tel:+123456789" className="underline">+1 234 567 89</a>
+      <div className="fixed bottom bottom  bottom-0 w-full bg-black bg-opacity-75 text-white py-4 px-3 lg:px-8 flex flex-col lg:flex-row justify-between items-center space-y-1 lg:space-y-0 ">
+        <div className=" font-bold text-center lg:text-lg ">
+          Contattaci: <a href="mailto:info@mxline.com" className="underline">info@mxline.com</a> 
+          <div> 
+            <a href="tel:+123456789" className="underline">+1 234 567 89</a> 
+          </div>
+          
         </div>
-        <div className="text-base lg:text-lg">
-        Via Spercenigo 31, Veneto, Italy 31030
+        <div className="text-base lg:text-lg text-center">
+        Via Spercenigo 31, Treviso, Italy 31030
         </div>
         <div className="flex space-x-4">
           <a
