@@ -130,15 +130,12 @@ const Sport_Man_Collection = () => {
               {/* <div className="text-base mt-2">
                 <strong>Options:</strong> {product.options}
               </div> */}
-              <div
-              href="mailto:albertomxline@gmail.com?subject=Custom Inquiry&body=I am interested in your custom services."
-              className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full"
-              initial={{ opacity: 0, y: 20 }}
-            
-              transition={{ duration: 1, delay: 1.5 }}
-            >
-              Contact Us
-            </div>
+             <a
+                href="mailto:albertomxline@gmail.com?subject=Custom Inquiry&body=I am interested in your custom services."
+                className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full block"
+              >
+                Contact Us
+              </a>
             </div>
 
             {/* Testo accanto all'immagine su schermi grandi */}
@@ -158,16 +155,13 @@ const Sport_Man_Collection = () => {
               <div className="text-xl lg:text-2xl mt-4">
                 <strong>Options:</strong> {product.options}
               </div>
-              <div
-              href="mailto:albertomxline@gmail.com?subject=Custom Inquiry&body=I am interested in your custom services."
-              className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full"
-              initial={{ opacity: 0, y: 20 }}
-            
-              transition={{ duration: 1, delay: 1.5 }}
-            >
-              Contact Us
-            </div>
-            </div>
+              <a
+                href="mailto:albertomxline@gmail.com?subject=Custom Inquiry&body=I am interested in your custom services."
+                className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full block"
+              >
+                Contact Us
+              </a>
+              </div>
           </div>
         </section>
       ))}

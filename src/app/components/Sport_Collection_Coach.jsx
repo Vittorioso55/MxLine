@@ -103,14 +103,13 @@ const Sport_Collection_Coach = () => {
               <div className="text-base mt-2">
                 {product.features}
               </div>
-              <div
+              <a
                 href="mailto:albertomxline@gmail.com?subject=Custom Inquiry&body=I am interested in your custom services."
-                className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full"
-                initial={{ opacity: 0, y: 20 }}
-                transition={{ duration: 1, delay: 1.5 }}
+                className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full block"
               >
                 Contact Us
-              </div>
+              </a>
+              
             </div>
 
             
@@ -129,18 +128,12 @@ const Sport_Collection_Coach = () => {
               <div className="text-xl lg:text-2xl mt-4">
                 <strong>Fabric:</strong> {product.fabric}
               </div>
-              <div
-              href="mailto:albertomxline@gmail.com?subject=Custom Inquiry&body=I am interested in your custom services."
-              className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full"
-              initial={{ opacity: 0, y: 20 }}
-            
-              transition={{ duration: 1, delay: 1.5 }}
-            >
-              Custom Now!
-            </div>
-              {/* <div className="text-xl lg:text-2xl mt-4">
-                <strong>Options:</strong> {product.options}
-              </div> */}
+              <a
+                href="mailto:albertomxline@gmail.com?subject=Custom Inquiry&body=I am interested in your custom services."
+                className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full block"
+              >
+                Contact Us
+              </a>
             </div>
           </div>
         </section>
