@@ -65,12 +65,12 @@ const Page_7 = () => {
         <div className=" font-bold text-center lg:text-lg ">
           Contattaci: <a href="mailto:info@mxline.com" className="underline">info@mxline.com</a> 
           <div> 
-            <a href="tel:+123456789" className="underline">+1 234 567 89</a> 
+            <a href="tel:+39 0422892160" className="underline">+39 0422 892160</a> 
           </div>
           
         </div>
         <div className="text-base lg:text-lg text-center">
-        Via Spercenigo 31, Treviso, Italy 31030
+        Via Spercenigo 31, Treviso, Italy - 31030
         </div>
         <div className="flex space-x-4">
           <a

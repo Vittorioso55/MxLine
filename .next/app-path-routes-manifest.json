@@ -1,0 +1,15 @@
+{
+  "/page": "/",
+  "/favicon.ico/route": "/favicon.ico",
+  "/Kid/page": "/Kid",
+  "/About_us/page": "/About_us",
+  "/Man_Sport/page": "/Man_Sport",
+  "/Products/page": "/Products",
+  "/Man_Woman_Race/page": "/Man_Woman_Race",
+  "/RaceWear/page": "/RaceWear",
+  "/MxDaily/page": "/MxDaily",
+  "/SportWear/page": "/SportWear",
+  "/Sport_Woman/page": "/Sport_Woman",
+  "/Sport_Coach/page": "/Sport_Coach",
+  "/api/send/route": "/api/send"
+}
